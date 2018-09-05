@@ -8,12 +8,12 @@ import os
 import sys
 
 # ElasticSearch Cluster to Monitor
-elasticServer = os.environ.get('ES_METRICS_CLUSTER_URL', 'http://server1:9200')
+elasticServer = os.environ.get('ES_METRICS_CLUSTER_URL', 'http://c3statsclient01.amadis.com:9200')
 interval = int(os.environ.get('ES_METRICS_INTERVAL', '60'))
 
 # ElasticSearch Cluster to Send Metrics
 elasticIndex = os.environ.get('ES_METRICS_INDEX_NAME', 'elasticsearch_metrics')
-elasticMonitoringCluster = os.environ.get('ES_METRICS_MONITORING_CLUSTER_URL', 'http://server2:9200')
+elasticMonitoringCluster = os.environ.get('ES_METRICS_MONITORING_CLUSTER_URL', 'http://c3statsclient01.amadis.com:9200')
 
 # Enable Elasticsearch Security
 # read_username and read_password for read ES cluster information
